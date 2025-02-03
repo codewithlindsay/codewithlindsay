@@ -1,0 +1,290 @@
+ body {
+  font-family: 'Dynapuff', cursive;
+    background: #82D6E7;
+    color: #333;
+    text-align: center;
+  }
+  
+  .container {
+  margin: 50px auto;
+    padding: 20px;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 20px;
+    top: 250px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+  }
+  
+/* Regular container styles */
+.container h1 {
+  font-family: 'Dynapuff';
+  font-size: 4.3rem; /* Keep this large font size */
+  color: #ff69b4;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+  input {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 40px;
+    font-family: 'Dynapuff';
+  }
+  select {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-family: 'Dynapuff';
+  }
+  
+  p {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 25px;
+    font-family: 'Dynapuff';
+    color: #5089D2;
+  }
+  
+  button {
+    background-color: #00BCB6;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100px;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Dynapuff';
+    font-size: 20px;
+  }
+  
+  button:hover {
+    background-color: #00CCCC;
+  }
+  
+  #result {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: 'Dynapuff';
+  }
+
+/* Candles */
+.candles {
+  position: absolute;
+  top: 180px; /* Adjust as needed to align above the container */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 10; /* Ensures candles appear above other elements */
+}
+
+.candle {
+  position: relative;
+  width: 30px;
+  height: 120px;
+  background: linear-gradient(to bottom, #fff, #d9d9d9);
+  border-radius: 3px;
+}
+
+.candle::before {
+  content: '';
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 25px;
+  height: 60px;
+  background: radial-gradient(circle, #ffdf85, #ff9933);
+  border-radius: 50%;
+  animation: flicker 0.8s infinite alternate;
+}
+
+.candle-stripes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+      135deg,
+      #ffcccb,
+      #ffcccb 8px, /* Thickness of the pink stripe */
+      #ffffff 8px, /* Thickness of the white stripe */
+      #ffffff 16px /* Total stripe pattern thickness */
+  );
+  border-radius: 3px;
+}
+
+@keyframes flicker {
+  0% {
+      transform: translate(-50%, -1px);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(-50%, 1px);
+      opacity: 0.8;
+  }
+}
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+  font-family: 'Dynapuff', sans-serif;
+  text-align: center;
+}
+
+#resultText {
+  font-size: 2.7rem;
+  margin-bottom: 250px;
+  color: white;
+}
+
+/* Small Container for the Loading Screen */
+.cake-body {
+  width: 150px;
+  height: 130px; /* Adjust height for cake's body */
+  background-color: white; /* Color resembling a cake */
+  top: 90px;
+  right: 50%;
+  position: relative;
+  z-index: 5; /* Ensure it sits above other elements */
+  border-radius: 10px;
+}
+.face {
+  position: absolute;
+  top: 100px; /* Adjust to align the face vertically */
+  left: 50%;
+  transform: translateX(-80%);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Eyes */
+.eye {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: #333; /* Eye color */
+  border-radius: 50%;
+}
+
+/* Left eye */
+.eye.left {
+  left: 80px; /* Adjust spacing */
+}
+
+/* Right eye */
+.eye.right {
+  right: 80px; /* Adjust spacing */
+}
+
+/* Smile */
+.smile {
+  position: absolute;
+  bottom: 0;
+  width: 30px; /* Smile width */
+  height: 15px; /* Smile height */
+  border: 3px solid #333; /* Smile color and thickness */
+  border-top: none;
+  border-radius: 0 0 50px 50px; /* Curved smile */
+}
+  
+h1 {
+  font-family: 'Dynapuff';
+  font-size: 2rem; /* Smaller font for loading text */
+  color: #ff69b4;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Small Candles */
+.candles-small {
+  position: absolute;
+  top: 410px; /* Adjust as needed */
+  align-items: center;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  animation: dance 1s infinite alternate; /* Apply dance animation */
+}
+
+.candle-small {
+  position: relative;
+  width: 20px; /* Smaller candles */
+  height: 80px; /* Smaller height */
+  background: linear-gradient(to bottom, #fff, #d9d9d9);
+  border-radius: 3px;
+}
+
+.candle-small::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px; /* Smaller flame */
+  height: 30px; /* Smaller flame */
+  background: radial-gradient(circle, #ffdf85, #ff9933);
+  border-radius: 50%;
+  animation: flicker 0.8s infinite alternate;
+}
+
+.candle-stripes-small {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    #ffcccb,
+    #ffcccb 6px, /* Thinner stripes */
+    #ffffff 6px, /* Thinner stripes */
+    #ffffff 12px
+  );
+  border-radius: 3px;
+}
+
+#goBackButton{
+  margin-top: 320px;
+  position: absolute;
+}
+
+@keyframes flicker {
+  0% {
+    transform: translate(-50%, -1px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 1px);
+    opacity: 0.8;
+  }
+}
+
+/* Dance Animation */
+@keyframes dance {
+  0% {
+    transform: translateX(-50%) rotate(5deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(-5deg);
+  }
+}

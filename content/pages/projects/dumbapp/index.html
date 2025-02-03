@@ -1,0 +1,61 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Checker</title>
+    <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <div class="firstScreen">
+    <div class="candles">
+      <div class="candle">
+          <div class="candle-stripes"></div>
+      </div>
+      <div class="candle">
+          <div class="candle-stripes"></div>
+      </div>
+      <div class="candle">
+          <div class="candle-stripes"></div>
+      </div>
+      <div class="candle">
+          <div class="candle-stripes"></div>
+      </div>
+  </div>
+    <div class="container">
+      <h1>Is it your birthday?</h1>
+      <p>Enter your birthday:</p>
+      <select id="monthSelect">
+        <option value="" disabled selected>Month</option>
+      </select>
+      <select id="daySelect">
+        <option value="" disabled selected>Day</option>
+      </select>
+      <br>
+      <button onclick="checkBirthday()">Check</button>
+    </div>
+  </div>
+  <div id="loadingScreen" class="loading-screen" style="display: none;">
+    <h1 id="resultText"></h1>
+    <div class="candles-small">
+      <div class="candle-small">
+          <div class="candle-stripes-small"></div>
+      </div>
+      <div class="candle-small">
+          <div class="candle-stripes-small"></div>
+      </div>
+      <div class="candle-small">
+          <div class="candle-stripes-small"></div>
+      </div>
+      <div class="cake-body"></div>    
+    <div class="face">
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="smile"></div>
+  </div>
+  </div>
+  <button id="goBackButton" onclick="goBack()">Go Back</button>
+</div>
+    <script src="script.js"></script>
+  </body>
