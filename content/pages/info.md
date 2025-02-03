@@ -14,10 +14,7 @@ sections:
     colors: colors-f
     backgroundSize: full
     text: >-
-      ## Hey I’m a developer. I’ve been born and raised in the world, and that’s
-      also where I’m based. I’m currently a free agent, ex-this, ex-that,
-      ex-super big name. When I’m not coding, writing or creating, I eat
-      cereals. I have a dog, check her out [@mygod](https://www.stackbit.com/).
+      ## Hi I'm Lindsay! I was born and raised in Salt Lake City, Utah, which is where I'm currently located.
     media:
       type: ImageBlock
       url: /images/about.jpg
